@@ -8,7 +8,7 @@
     <link href="/2023/03/26/updatelog/"/>
     <url>/2023/03/26/updatelog/</url>
     
-    <content type="html"><![CDATA[<p>2023-03-26 第一次大改 把评论系统从valine换成了cusdis <em>(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的)</em></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>2023-03-26   第一次大改 把评论系统从valine换成了cusdis <em>(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的)</em> 并且，关闭了分类和标签导航栏选项，问就是我不会搞（），然后Markdown语法也不咋地会用（</p></blockquote>]]></content>
     
     
     
