@@ -54,31 +54,6 @@
   
   
   <entry>
-    <title>连通性情况</title>
-    <link href="/2023/04/22/007/"/>
-    <url>/2023/04/22/007/</url>
-    
-    <content type="html"><![CDATA[<blockquote><p>Github Pages/Cloudflare Pages</p></blockquote><h3 id="2023-04-22-16-20"><a href="#2023-04-22-16-20" class="headerlink" title="2023-04-22 16:20"></a>2023-04-22 16:20</h3><p>站长之家ping结果：9红5黄11绿/2红14黄10绿<br>本机网络（河北移动）Ping：279ms/196ms<br>本机网络访问速度：DOMContentLoaded: 6.05 秒,Load：2.29分钟/DOMContentLoaded: 3秒，Load：3.89秒</p><p>个人感觉CF Pages访问速度比Gh Pages快上不少，但是部分网络pages.dev容易被重置和超时的概率比github.io大得多（例如某地电信网络，无法打开*.pages.dev）</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>About</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>About</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>(ᗜˬᗜ)</title>
     <link href="/2023/04/22/006/"/>
     <url>/2023/04/22/006/</url>
@@ -157,10 +132,10 @@
   
   <entry>
     <title>updatelog</title>
-    <link href="/2023/03/26/002/"/>
-    <url>/2023/03/26/002/</url>
+    <link href="/2023/03/26/updatelog/"/>
+    <url>/2023/03/26/updatelog/</url>
     
-    <content type="html"><![CDATA[<h4 id="2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"><a href="#2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）" class="headerlink" title="2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"></a>2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</h4><h4 id="2023-05-06-beta-0-1-1-压缩博客图片"><a href="#2023-05-06-beta-0-1-1-压缩博客图片" class="headerlink" title="2023-05-06  beta 0.1.1 压缩博客图片"></a>2023-05-06  beta 0.1.1 压缩博客图片</h4><h4 id="2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句"><a href="#2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句" class="headerlink" title="2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句"></a>2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</h4><h4 id="2023-04-16-beta-0-0-3-增加运行时间，更改部分内容"><a href="#2023-04-16-beta-0-0-3-增加运行时间，更改部分内容" class="headerlink" title="2023-04-16  beta 0.0.3 增加运行时间，更改部分内容"></a>2023-04-16  beta 0.0.3 增加运行时间，更改部分内容</h4><h4 id="2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）"><a href="#2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）" class="headerlink" title="2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了Cloudflare Pages页面 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）"></a>2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</h4><h4 id="2023-03-26-beta-0-0-1-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看"><a href="#2023-03-26-beta-0-0-1-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看" class="headerlink" title="2023-03-26  beta 0.0.1 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  (虽然这博客也没几个人看) *"></a>2023-03-26  beta 0.0.1 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> *</h4><h4 id="2023-03-26-建站"><a href="#2023-03-26-建站" class="headerlink" title="2023-03-26 建站"></a>2023-03-26 建站</h4>]]></content>
+    <content type="html"><![CDATA[<h4 id="2023-06-23-release-1-0-1-把全站字体换了，（感觉怪怪的）；同时删除部分文章，更改部分经常改动文章的文件名"><a href="#2023-06-23-release-1-0-1-把全站字体换了，（感觉怪怪的）；同时删除部分文章，更改部分经常改动文章的文件名" class="headerlink" title="2023-06-23  release 1.0.1 把全站字体换了，（感觉怪怪的）；同时删除部分文章，更改部分经常改动文章的文件名"></a>2023-06-23  release 1.0.1 把全站字体换了，<del>（感觉怪怪的）</del>；同时删除部分文章，更改部分经常改动文章的文件名</h4><h4 id="2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"><a href="#2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）" class="headerlink" title="2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"></a>2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</h4><h4 id="2023-05-06-beta-0-1-1-压缩博客图片"><a href="#2023-05-06-beta-0-1-1-压缩博客图片" class="headerlink" title="2023-05-06  beta 0.1.1 压缩博客图片"></a>2023-05-06  beta 0.1.1 压缩博客图片</h4><h4 id="2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句"><a href="#2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句" class="headerlink" title="2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句"></a>2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</h4><h4 id="2023-04-16-beta-0-0-3-增加运行时间，更改部分内容"><a href="#2023-04-16-beta-0-0-3-增加运行时间，更改部分内容" class="headerlink" title="2023-04-16  beta 0.0.3 增加运行时间，更改部分内容"></a>2023-04-16  beta 0.0.3 增加运行时间，更改部分内容</h4><h4 id="2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）"><a href="#2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）" class="headerlink" title="2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了Cloudflare Pages页面 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）"></a>2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</h4><h4 id="2023-03-26-beta-0-0-1-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看"><a href="#2023-03-26-beta-0-0-1-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看" class="headerlink" title="2023-03-26  beta 0.0.1 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  (虽然这博客也没几个人看) *"></a>2023-03-26  beta 0.0.1 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> *</h4><h4 id="2023-03-26-建站"><a href="#2023-03-26-建站" class="headerlink" title="2023-03-26 建站"></a>2023-03-26 建站</h4>]]></content>
     
     
     
@@ -176,8 +151,8 @@
   
   <entry>
     <title>博客第一篇文章</title>
-    <link href="/2023/03/25/001/"/>
-    <url>/2023/03/25/001/</url>
+    <link href="/2023/03/25/helloworld/"/>
+    <url>/2023/03/25/helloworld/</url>
     
     <content type="html"><![CDATA[<p>如您所见，这是这个博客的第一篇文章<br>一切才刚刚开始<br>你好，世界！</p>]]></content>
     
