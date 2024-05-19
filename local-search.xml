@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>关于我的补充</title>
+    <link href="/2024/05/19/aboutme1/"/>
+    <url>/2024/05/19/aboutme1/</url>
+    
+    <content type="html"><![CDATA[<h2 id="我的名字"><a href="#我的名字" class="headerlink" title="我的名字"></a>我的名字</h2><ul><li>繁诗<ul><li>也可以叫“饭食” <em>（谐音）</em>、“Fanshi” <em>（拼音）</em> 、<del>“蘩诗”（？）</del>，但是你想叫什么自己请随意就好</li><li><del>亦或是“无电自热电蘩煲”</del></li></ul></li><li>晓诗月<ul><li>晓月=林晓月（自设）</li></ul></li><li><del>清廉正直铃</del>（已不常用）</li><li>（还曾用过一段时间的“一只鸽子苏俄球” <del>“一只苏联内务部球、苏联内务部的某只球”</del>）</li><li><del>之前用过“反十”，这也算是一段黑历史</del>*</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>About</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>群聊</title>
+    <link href="/2023/07/21/group/"/>
+    <url>/2023/07/21/group/</url>
+    
+    <content type="html"><![CDATA[<p><img src="group1.webp" alt="群聊二维码"></p><blockquote><p>群号：1028594287<br>群内气氛很友好的，欢迎各路大佬加入和谐讨论</p></blockquote><p><img src="group2.webp"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>关于本站</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>About</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>河北移动现状（23.6.10）</title>
+    <link href="/2023/06/10/009/"/>
+    <url>/2023/06/10/009/</url>
+    
+    <content type="html"><![CDATA[<p><img src="009-1.png" alt="直接NAT4是吧"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>瞎搞</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>瞎搞</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>23-05-06</title>
+    <link href="/2023/05/06/008/"/>
+    <url>/2023/05/06/008/</url>
+    
+    <content type="html"><![CDATA[<p><img src="008-1.png" alt="太生草以至于说不出话"></p><hr><p><img src="008-2.png" alt="我可能不是微软用户里的“人”（2023年5月6日现截的）"><br>明明已经官宣全部放开了啊kora！</p><blockquote><p>2023-06-10<br><em>后经搜索查询，可能与美国对中制裁有关（限制中国用户使用AI产品）</em> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="并不保证真实性">[1]</span></a></sup><br><del><em>不要注册国区账号，否则你会不幸（划）</em></del></p></blockquote><p>（幸好微软账户注册还是比较方便的，很容易就能注册一个）</p><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>并不保证真实性<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>瞎搞</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>瞎搞</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>QQ极速版使用体验</title>
+    <link href="/2023/04/15/004/"/>
+    <url>/2023/04/15/004/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>目前QQ极速版已经停止服务（不包含个别备份登录情况），此文章已不具备实用性</p></blockquote><blockquote><p>2022年4月15日在自己的QQ空间发布，其中部分内容可能过时</p></blockquote><p>优点：</p><p>1.占用运行内存少：大部分时间内只有一个msfservice进程，也就差不多不超过100MB的样子，内置的QQ空间占用也较少 </p><p><img src="004-1.webp"></p><p> 差不多就这样</p><p>2.占用储存空间小：相较于QQ其他版本，少的不是一星半点（某些老版本除外）</p><p>3.界面简洁：好像就是QQ刚出简洁模式时候的UI</p><p>缺点：</p><p>1.发送图片会非常慢才发过去</p><p>2.下载文件时速度非常慢（大概与网络无关，毕竟QQ其他版本都是满速下载）</p><p>3.别人转发的聊天记录需要老半天才能加载出来</p><p>4.收到gif图片或表情后那条消息会变得非常大</p><p>5.早期版本回复自己发送的图片会闪退崩溃</p><p>6.群文件没有文件夹</p><p>7.群聊内不能禁言，不能修改入群问题，踢人需要费好大劲才可以</p><p>8.加好友或群申请通知会收不到</p><p>9.一些杂小但不影响使用的bug，比如群等级与普通QQ不一致，个别地方东西没有删干净等等等等</p><p>总结：弃更的半成品</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>搞机</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>心得</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>updatelog</title>
+    <link href="/2023/03/26/updatelog/"/>
+    <url>/2023/03/26/updatelog/</url>
+    
+    <content type="html"><![CDATA[<h4 id="2024-05-19-alpha-1-0-1-1-偶然想起来这还有个站-删除了部分我认为比较水的文章"><a href="#2024-05-19-alpha-1-0-1-1-偶然想起来这还有个站-删除了部分我认为比较水的文章" class="headerlink" title="2024-05-19  alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章"></a>2024-05-19  alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章</h4><h4 id="2023-07-21-release-1-0-1-站点细节改动，修改更新日志"><a href="#2023-07-21-release-1-0-1-站点细节改动，修改更新日志" class="headerlink" title="2023-07-21  release 1.0.1 站点细节改动，修改更新日志"></a>2023-07-21  release 1.0.1 站点细节改动，修改更新日志</h4><h4 id="2023-06-23-把全站字体换了，（感觉怪怪的）；"><a href="#2023-06-23-把全站字体换了，（感觉怪怪的）；" class="headerlink" title="2023-06-23 把全站字体换了，（感觉怪怪的）；"></a>2023-06-23 把全站字体换了，<del>（感觉怪怪的）</del>；</h4><h4 id="2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"><a href="#2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）" class="headerlink" title="2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"></a>2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</h4><h4 id="2023-05-06-beta-0-1-1-压缩博客全部图片为webp"><a href="#2023-05-06-beta-0-1-1-压缩博客全部图片为webp" class="headerlink" title="2023-05-06  beta 0.1.1 压缩博客全部图片为webp"></a>2023-05-06  beta 0.1.1 压缩博客全部图片为webp</h4><h4 id="2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句"><a href="#2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句" class="headerlink" title="2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句"></a>2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</h4><h4 id="2023-04-16-增加运行时间，更改部分内容"><a href="#2023-04-16-增加运行时间，更改部分内容" class="headerlink" title="2023-04-16  增加运行时间，更改部分内容"></a>2023-04-16  增加运行时间，更改部分内容</h4><h4 id="2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）"><a href="#2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）" class="headerlink" title="2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了Cloudflare Pages页面 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）"></a>2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</h4><h4 id="2023-03-26-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看"><a href="#2023-03-26-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看" class="headerlink" title="2023-03-26  把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  (虽然这博客也没几个人看) *"></a>2023-03-26  把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> *</h4><h4 id="2023-03-26-18-42-beta-0-0-1-建站"><a href="#2023-03-26-18-42-beta-0-0-1-建站" class="headerlink" title="2023-03-26 18:42 beta 0.0.1 建站"></a>2023-03-26 18:42 beta 0.0.1 建站</h4>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>About</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>博客第一篇文章</title>
+    <link href="/2023/03/25/helloworld/"/>
+    <url>/2023/03/25/helloworld/</url>
+    
+    <content type="html"><![CDATA[<p>如您所见，这是这个博客的第一篇文章<br>一切才刚刚开始<br>你好，世界！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>关于本站</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>About</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
