@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>250210</title>
+    <link href="/2025/02/10/250210/"/>
+    <url>/2025/02/10/250210/</url>
+    
+    <content type="html"><![CDATA[<p><img src="Screenshot_20250209_114815.webp"><br>费了四个月甚至五个月的劲终于搓出来了，但是仅限“天猫超市”里使用，出了那个板块根本不能用，不好玩了</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>日记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>OPPO 1107 搞机心得</title>
     <link href="/2025/02/09/20250209/"/>
     <url>/2025/02/09/20250209/</url>
@@ -58,7 +77,7 @@
     <link href="/2024/05/19/aboutme1/"/>
     <url>/2024/05/19/aboutme1/</url>
     
-    <content type="html"><![CDATA[<h2 id="我的名字"><a href="#我的名字" class="headerlink" title="我的名字"></a>我的名字</h2><ul><li>繁诗<ul><li>也可以叫“饭食” <em>（谐音）</em>、“Fanshi” <em>（拼音）</em> 、<del>“蘩诗”（？）</del>，但是你想叫什么自己请随意就好</li><li><del>亦或是“无电自热电蘩煲”</del></li></ul></li><li>晓诗月<ul><li>晓月=林晓月（自设）</li></ul></li><li><del>清廉正直铃</del>（已不常用）</li><li>（还曾用过一段时间的“一只鸽子苏俄球” <del>“一只苏联内务部球、苏联内务部的某只球”</del>）</li><li><del>之前用过“反十”，这也算是一段黑历史</del>*</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="我的名字"><a href="#我的名字" class="headerlink" title="我的名字"></a>我的名字</h2><ul><li>繁诗<ul><li>也可以叫“饭食” <em>（谐音）</em>、“Fanshi” <em>（拼音）</em> 、<del>“蘩诗”（？）</del>，但是你想叫什么自己请随意就好</li><li><del>亦或是“无电自热电蘩煲”</del></li></ul></li><li>晓诗月<ul><li>晓月=林晓月（自设）</li></ul></li><li><del>清廉正直铃</del>（已不常用）</li><li>（还曾用过一段时间的“一只鸽子苏俄球” <del>“一只苏联内务部球、苏联内务部的某只球”</del>）</li><li><del>之前用过“反十”，这也算是一段黑历史</del>*</li></ul><hr><h2 id="鸽子聚集地"><a href="#鸽子聚集地" class="headerlink" title="鸽子聚集地"></a>鸽子聚集地</h2><p>群号：1028594287<br><img src="group.png" alt="群聊二维码"><br>群内气氛很友好的，欢迎各路大佬加入和谐讨论</p>]]></content>
     
     
     
@@ -73,11 +92,36 @@
   
   
   <entry>
+    <title>红米note4MTK版（Nikel）玩机备忘录</title>
+    <link href="/2023/08/29/hmnote4mtk/"/>
+    <url>/2023/08/29/hmnote4mtk/</url>
+    
+    <content type="html"><![CDATA[<h2 id="开箱初体验"><a href="#开箱初体验" class="headerlink" title="开箱初体验"></a>开箱初体验</h2><p>刚拆封的时候，看起来成色还蛮新的，就是屏幕上有些指纹和少量油渍，无伤大雅<br>卖家发过来的时候，手机的系统就是MIUI8开发版，尝试通过系统自带的官方渠道进行系统更新，但是一直提示无网络；把手机连接到电脑上以后，尝试通过小米手机助手升级，同样失败，提示为最新版本（Note4的MTK版本能上到MIUI10.1），遂放弃通过官方渠道升级<br>点开系统设置里的授权管理，试图开启ROOT权限，提示未解BL锁，官方解锁途径需要等待时间，耐不下性子，于是乎强解BL锁（联发科老机子能免拆强解）</p><h2 id="解BL锁，刷TWRP"><a href="#解BL锁，刷TWRP" class="headerlink" title="解BL锁，刷TWRP"></a>解BL锁，刷TWRP</h2><blockquote><p>使用工具：<a href="https://gitee.com/longmo666/mtktools_by_longmo_old">MTK工具箱</a>（之前用的是原版的mtkclient，但是搞了好长时间也没整上，这位大佬的工具箱救了我一命）</p></blockquote><p>比起强解BL锁，我还是推荐你通过官方渠道，<em>因为我不知道什么原因一直连接接触不良，幸好没砖</em><br>过程：<del>距离折腾有一段时间了，怕过程忘了，所以暂且不写了，有需要可以自己网上搜一下</del><br>TWRP镜像：cofface_nikel_recovery.img <a href="https://androidfilehost.com/?fid=529152257862683392">原文件</a> <a href="https://forum.xda-developers.com/t/twrp-3-3-1-for-the-redmi-pro.3610075/">XDA原帖地址</a><br>刷入recovery的步骤烂大街了，不做赘述<br>然后我通过TWRP刷入了最新的MIUI10.1，但是事情并非就此结束</p><h2 id="一波三折的刷机体验"><a href="#一波三折的刷机体验" class="headerlink" title="一波三折的刷机体验"></a>一波三折的刷机体验</h2><p>刷入MIUI10以后，首先就是刷入面具获取root权限，获取完成之后，正当开始折腾时，问题就来了：<br>首先就是尝试刷入Xposed框架，不能用，直接刷砖了，幸好有备份，回档以后还以为是选的框架包版本不对，又重换了版本以后继续刷入，不出所料，又砖了；<br>我想，不能刷XP框架，那就去搞面具吧，但是好巧不巧，尝试刷入一个字体包，系统直接进不了桌面了，更有一次直接都不能开机了，音量键救砖模块都不生效（最后还是通过adb shell移除面具全部模块才就回来的）；<br>这可就把我弄的急了，起初还以为是国内版MIUI的限制，于是就去刷了EU版rom，发现问题仍旧，但是没办法，这种老手机不能root那就约莫等于在2023年的今天不怎么好存活，正巧这次又砖了，发现还有之前一开始的刚开箱时候的MIUI8系统备份，就恢复回去了<br>恢复完之后，发现面具模块也能正常用了（但是字体模块没刷）、xposed模块也能正常使用了，然后我就知道了问题所在，MIUI10限制太多<br><em>找到问题根源了之后，我想着再折腾一下，刷一下原生，XDA里的包有7.1的有6.0的小试了一下没刷成功（原因是没挂载system分区，我真的有点baka），后边就不折腾了刷回MIUI9安心养老了</em></p><h2 id="后续的一些使用体验"><a href="#后续的一些使用体验" class="headerlink" title="后续的一些使用体验"></a>后续的一些使用体验</h2><p>（待补充）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>搞机</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>搞机</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>群聊</title>
     <link href="/2023/07/21/group/"/>
     <url>/2023/07/21/group/</url>
     
-    <content type="html"><![CDATA[<p><img src="group1.webp" alt="群聊二维码"></p><blockquote><p>群号：1028594287<br>群内气氛很友好的，欢迎各路大佬加入和谐讨论</p></blockquote><p><img src="group2.webp"></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="group1.webp">群聊二维码</a></p><blockquote><p>群号：1028594287<br>群内气氛很友好的，欢迎各路大佬加入和谐讨论</p></blockquote><p><img src="group2.webp"></p>]]></content>
     
     
     <categories>
@@ -173,11 +217,11 @@
   
   
   <entry>
-    <title>updatelog</title>
+    <title>更新日志</title>
     <link href="/2023/03/26/updatelog/"/>
     <url>/2023/03/26/updatelog/</url>
     
-    <content type="html"><![CDATA[<h4 id="2024-05-19-alpha-1-0-1-1-偶然想起来这还有个站-删除了部分我认为比较水的文章"><a href="#2024-05-19-alpha-1-0-1-1-偶然想起来这还有个站-删除了部分我认为比较水的文章" class="headerlink" title="2024-05-19  alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章"></a>2024-05-19  alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章</h4><h4 id="2023-07-21-release-1-0-1-站点细节改动，修改更新日志"><a href="#2023-07-21-release-1-0-1-站点细节改动，修改更新日志" class="headerlink" title="2023-07-21  release 1.0.1 站点细节改动，修改更新日志"></a>2023-07-21  release 1.0.1 站点细节改动，修改更新日志</h4><h4 id="2023-06-23-把全站字体换了，（感觉怪怪的）；"><a href="#2023-06-23-把全站字体换了，（感觉怪怪的）；" class="headerlink" title="2023-06-23 把全站字体换了，（感觉怪怪的）；"></a>2023-06-23 把全站字体换了，<del>（感觉怪怪的）</del>；</h4><h4 id="2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"><a href="#2023-06-10-release-1-0-0-应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）" class="headerlink" title="2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）"></a>2023-06-10  release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</h4><h4 id="2023-05-06-beta-0-1-1-压缩博客全部图片为webp"><a href="#2023-05-06-beta-0-1-1-压缩博客全部图片为webp" class="headerlink" title="2023-05-06  beta 0.1.1 压缩博客全部图片为webp"></a>2023-05-06  beta 0.1.1 压缩博客全部图片为webp</h4><h4 id="2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句"><a href="#2023-04-22-beta-0-1-0-优化关于页显示，继续更改网站部分内容，优化文章词句" class="headerlink" title="2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句"></a>2023-04-22  beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</h4><h4 id="2023-04-16-增加运行时间，更改部分内容"><a href="#2023-04-16-增加运行时间，更改部分内容" class="headerlink" title="2023-04-16  增加运行时间，更改部分内容"></a>2023-04-16  增加运行时间，更改部分内容</h4><h4 id="2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）"><a href="#2023-04-15-beta-0-0-2-更改了部分网站内容，更改了GitHub用户名：Fanshi001-gt-Fanshi233，并且开设了Cloudflare-Pages页面-作为备份站（毕竟Github-Pages的国内访问状况实在有点不可恭维）" class="headerlink" title="2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了Cloudflare Pages页面 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）"></a>2023-04-15  beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001-&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</h4><h4 id="2023-03-26-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看"><a href="#2023-03-26-把评论系统从valine换成了cusdis-配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的-虽然这博客也没几个人看" class="headerlink" title="2023-03-26  把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  (虽然这博客也没几个人看) *"></a>2023-03-26  把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> *</h4><h4 id="2023-03-26-18-42-beta-0-0-1-建站"><a href="#2023-03-26-18-42-beta-0-0-1-建站" class="headerlink" title="2023-03-26 18:42 beta 0.0.1 建站"></a>2023-03-26 18:42 beta 0.0.1 建站</h4>]]></content>
+    <content type="html"><![CDATA[<h4 id="2025-02-10"><a href="#2025-02-10" class="headerlink" title="2025-02-10"></a>2025-02-10</h4><p> 偶然+1 补档文章 站点整体大改 Cloudflare的镜像页寄了,修好了</p><h4 id="2024-05-19"><a href="#2024-05-19" class="headerlink" title="2024-05-19"></a>2024-05-19</h4><p> alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章</p><h4 id="2023-07-21"><a href="#2023-07-21" class="headerlink" title="2023-07-21"></a>2023-07-21</h4><p> release 1.0.1 站点细节改动，修改更新日志</p><h4 id="2023-06-23"><a href="#2023-06-23" class="headerlink" title="2023-06-23"></a>2023-06-23</h4><p> 把全站字体换了，<del>（感觉怪怪的）</del>；</p><h4 id="2023-06-10"><a href="#2023-06-10" class="headerlink" title="2023-06-10"></a>2023-06-10</h4><p> release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</p><h4 id="2023-05-06"><a href="#2023-05-06" class="headerlink" title="2023-05-06"></a>2023-05-06</h4><p> beta 0.1.1 压缩博客全部图片为webp</p><h4 id="2023-04-22"><a href="#2023-04-22" class="headerlink" title="2023-04-22"></a>2023-04-22</h4><p> beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</p><h4 id="2023-04-16"><a href="#2023-04-16" class="headerlink" title="2023-04-16"></a>2023-04-16</h4><p> 增加运行时间，更改部分内容</p><h4 id="2023-04-15"><a href="#2023-04-15" class="headerlink" title="2023-04-15"></a>2023-04-15</h4><p> beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001—&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</p><h4 id="2023-03-26"><a href="#2023-03-26" class="headerlink" title="2023-03-26"></a>2023-03-26</h4><p> 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> * </p><h4 id="2023-03-26-18-42"><a href="#2023-03-26-18-42" class="headerlink" title="2023-03-26 18:42"></a>2023-03-26 18:42</h4><p> beta 0.0.1 建站</p>]]></content>
     
     
     
