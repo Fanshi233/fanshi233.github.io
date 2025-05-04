@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>友链添加相关信息</title>
+    <link href="/2025/05/04/frilink/"/>
+    <url>/2025/05/04/frilink/</url>
+    
+    <content type="html"><![CDATA[<p>以下信息按需添加</p><blockquote><p>网站名称：Fanshi’s Blog</p></blockquote><blockquote><p>网站简介：风铃殿 ~ 繁诗的幻想之地</p></blockquote><blockquote><p>作者头像：”<a href="https://fastly.jsdelivr.net/gh/fanshi233/fanshi233.github.io@master/img/writer.webp&quot;">https://fastly.jsdelivr.net/gh/fanshi233/fanshi233.github.io@master/img/writer.webp&quot;</a></p></blockquote><blockquote><p>网站icon：”<a href="https://fastly.jsdelivr.net/gh/fanshi233/fanshi233.github.io@master/img/icon1.png&quot;">https://fastly.jsdelivr.net/gh/fanshi233/fanshi233.github.io@master/img/icon1.png&quot;</a></p></blockquote>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>250330</title>
     <link href="/2025/03/30/250330/"/>
     <url>/2025/03/30/250330/</url>
@@ -240,7 +253,7 @@
     <link href="/2023/03/26/updatelog/"/>
     <url>/2023/03/26/updatelog/</url>
     
-    <content type="html"><![CDATA[<h4 id="2025-02-10"><a href="#2025-02-10" class="headerlink" title="2025-02-10"></a>2025-02-10</h4><p> 偶然+1 补档文章 站点整体大改 Cloudflare的镜像页寄了,修好了</p><h4 id="2024-05-19"><a href="#2024-05-19" class="headerlink" title="2024-05-19"></a>2024-05-19</h4><p> alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章</p><h4 id="2023-07-21"><a href="#2023-07-21" class="headerlink" title="2023-07-21"></a>2023-07-21</h4><p> release 1.0.1 站点细节改动，修改更新日志</p><h4 id="2023-06-23"><a href="#2023-06-23" class="headerlink" title="2023-06-23"></a>2023-06-23</h4><p> 把全站字体换了，<del>（感觉怪怪的）</del>；</p><h4 id="2023-06-10"><a href="#2023-06-10" class="headerlink" title="2023-06-10"></a>2023-06-10</h4><p> release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</p><h4 id="2023-05-06"><a href="#2023-05-06" class="headerlink" title="2023-05-06"></a>2023-05-06</h4><p> beta 0.1.1 压缩博客全部图片为webp</p><h4 id="2023-04-22"><a href="#2023-04-22" class="headerlink" title="2023-04-22"></a>2023-04-22</h4><p> beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</p><h4 id="2023-04-16"><a href="#2023-04-16" class="headerlink" title="2023-04-16"></a>2023-04-16</h4><p> 增加运行时间，更改部分内容</p><h4 id="2023-04-15"><a href="#2023-04-15" class="headerlink" title="2023-04-15"></a>2023-04-15</h4><p> beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001—&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</p><h4 id="2023-03-26"><a href="#2023-03-26" class="headerlink" title="2023-03-26"></a>2023-03-26</h4><p> 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> * </p><h4 id="2023-03-26-18-42"><a href="#2023-03-26-18-42" class="headerlink" title="2023-03-26 18:42"></a>2023-03-26 18:42</h4><p> beta 0.0.1 建站</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="2025-05-04"><a href="#2025-05-04" class="headerlink" title="2025-05-04"></a>2025-05-04</h4><p> 接到友链申请，上来更新一下友链<br> 卜算子统计uv已经失效，所以将其移除</p><h4 id="2025-02-10"><a href="#2025-02-10" class="headerlink" title="2025-02-10"></a>2025-02-10</h4><p> 偶然+1 补档文章 站点整体大改 Cloudflare的镜像页寄了,修好了</p><h4 id="2024-05-19"><a href="#2024-05-19" class="headerlink" title="2024-05-19"></a>2024-05-19</h4><p> alpha 1.0.1.1 偶然想起来这还有个站 删除了部分我认为比较水的文章</p><h4 id="2023-07-21"><a href="#2023-07-21" class="headerlink" title="2023-07-21"></a>2023-07-21</h4><p> release 1.0.1 站点细节改动，修改更新日志</p><h4 id="2023-06-23"><a href="#2023-06-23" class="headerlink" title="2023-06-23"></a>2023-06-23</h4><p> 把全站字体换了，<del>（感觉怪怪的）</del>；</p><h4 id="2023-06-10"><a href="#2023-06-10" class="headerlink" title="2023-06-10"></a>2023-06-10</h4><p> release 1.0.0 应该可以发布正式版了吧，我觉得也没有什么东西可改了（苦笑）</p><h4 id="2023-05-06"><a href="#2023-05-06" class="headerlink" title="2023-05-06"></a>2023-05-06</h4><p> beta 0.1.1 压缩博客全部图片为webp</p><h4 id="2023-04-22"><a href="#2023-04-22" class="headerlink" title="2023-04-22"></a>2023-04-22</h4><p> beta 0.1.0 优化关于页显示，继续更改网站部分内容，优化文章词句</p><h4 id="2023-04-16"><a href="#2023-04-16" class="headerlink" title="2023-04-16"></a>2023-04-16</h4><p> 增加运行时间，更改部分内容</p><h4 id="2023-04-15"><a href="#2023-04-15" class="headerlink" title="2023-04-15"></a>2023-04-15</h4><p> beta 0.0.2 更改了部分网站内容，更改了GitHub用户名：Fanshi001—&gt;Fanshi233，并且开设了<a href="https://fanshi233.pages.dev/">Cloudflare Pages页面</a> 作为备份站（毕竟Github Pages的国内访问状况实在有点不可恭维）</p><h4 id="2023-03-26"><a href="#2023-03-26" class="headerlink" title="2023-03-26"></a>2023-03-26</h4><p> 把评论系统从valine换成了cusdis *(配置完leancloud国际版才发现不对国内用户服务了，就是cusdis得手动审核评论，怪麻烦的  <del>(虽然这博客也没几个人看)</del> * </p><h4 id="2023-03-26-18-42"><a href="#2023-03-26-18-42" class="headerlink" title="2023-03-26 18:42"></a>2023-03-26 18:42</h4><p> beta 0.0.1 建站</p>]]></content>
     
     
     
