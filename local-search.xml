@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Vmware安装黑苹果备忘录</title>
+    <link href="/2025/08/22/mac-on-vmware/"/>
+    <url>/2025/08/22/mac-on-vmware/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>因为基本上是按照教程走的，所以本文不再赘述<br>仅供参考</p></blockquote><p>教程：<a href="https://www.cnblogs.com/iancloud/p/17451781.html">全网最详细的VMware虚拟机安装MacOS系统教程，没有之一！！！附全部资源</a><br>系统镜像：<a href="https://www.mediafire.com/file/dbfod9u5q9ii9nd/macOS_Big_Sur_11.0.1_%252820B29%2529.iso/file">macOS Big Sur 11.0.1 (20B29).iso</a>（因为原文是度盘链接，所以没有使用，在网上另找的，不过安装过程大同小异；此资源的原文链接<a href="https://www.freedidi.com/5257.html">原文链接</a>）<br>安装后无法登录Apple ID 以及无法启用iCloud的解决办法:<a href="https://blog.csdn.net/butterfly_new/article/details/135246324">链接</a></p><p><img src="vmmac.jpg" alt="效果图" title="效果图"></p><blockquote><p>提示：如果设备性能太低而导致长时间不动是正常的，比如说在安装界面提示“剩余不到1分钟”结果卡了好长时间的，耐心等待</p></blockquote>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>自存资源分享</title>
     <link href="/2025/06/29/share/"/>
     <url>/2025/06/29/share/</url>
