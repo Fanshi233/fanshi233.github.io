@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>工具 · 风铃殿</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --text:#1f2329; --muted:#8a919f;
+    --accent:#4263eb; --border:#e8eaed;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+       background:var(--bg);color:var(--text);min-height:100vh;
+       padding:24px 16px;display:flex;justify-content:center}
+  .wrap{width:100%;max-width:560px}
+  h1{font-size:22px;font-weight:800;margin-bottom:4px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:20px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+        padding:18px;display:flex;align-items:center;justify-content:space-between;
+        gap:12px;text-decoration:none;color:inherit;transition:.15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .t{font-size:16px;font-weight:700}
+  .d{font-size:12px;color:var(--muted);margin-top:2px}
+  .arrow{color:var(--accent);font-size:22px;line-height:1}
+  .empty{color:var(--muted);font-size:13px;padding:8px 2px}
+  footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>工具</h1>
+  <div class="sub">一些随手能做的小工具</div>
+
+  <a class="card" href="./csm.html">
+    <div>
+      <div class="t">餐厅选择</div>
+      <div class="d">按时间表告诉我现在该去哪儿吃</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <footer>本页由 AI 辅助生成，仅用于方便个人使用</footer>
+</div>
+</body>
+</html>
