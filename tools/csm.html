@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>今天去哪儿吃 · 食堂时间表</title>
+<title>是啊，吃什么 · 食堂时间表</title>
 <style>
 :root{
   --bg:#f5f6f8; --card:#ffffff; --text:#1f2329; --muted:#8a9099;
@@ -31,7 +31,7 @@ h1{font-size:24px;font-weight:700;letter-spacing:.5px}
 .g-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .badge{font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px}
 .b-早餐{background:#fff9db;color:#e67700}
-.b-课间餐{background:#e7f5ff;color:#1971c2}
+.b-咖啡厅{background:#f3ece4;color:#9c6b3f}
 .b-午餐{background:#ffe8d9;color:#d9480f}
 .b-晚餐{background:#f3f0ff;color:#6741d9}
 .b-全天{background:#ebfbee;color:#2b8a3e}
@@ -42,7 +42,7 @@ h1{font-size:24px;font-weight:700;letter-spacing:.5px}
 .empty{padding:18px 6px 6px;color:var(--muted);font-size:14px;text-align:center}
 .next{margin-top:12px;font-size:13px;color:var(--muted);text-align:center}
 .next b{color:var(--accent);font-weight:600}
-.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.controls{display:flex;flex-direction:column;gap:12px}
 .controls input[type=range]{flex:1;min-width:180px;accent-color:var(--accent)}
 .time-label{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;min-width:52px;text-align:center}
 .btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer;color:var(--text)}
@@ -58,14 +58,25 @@ h2{font-size:15px;font-weight:700;margin:0 0 4px}
 .row.active{background:var(--accent-soft)}
 .row.active .rt{color:var(--accent)}
 .row.dim{opacity:.45}
-.footer{margin-top:18px;color:var(--muted);font-size:12px;text-align:center;line-height:1.7}
+.rand{margin-top:16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rand .btn{background:var(--accent);color:#fff;border-color:var(--accent)}
+.rand .btn:hover{opacity:.92;color:#fff}
+.rand-result{font-size:16px;font-weight:700;color:var(--accent)}
+.controls-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.flabel{color:var(--muted);font-size:13px;white-space:nowrap}
+.group.soon{border-color:#ffa8a8;background:#fff5f5}
+.group.soon .g-time{color:#e03131;font-weight:600}
+.tag-soon{font-size:11px;color:#fff;background:#e03131;border-radius:4px;padding:1px 5px;margin-left:4px}
+.row.soon{background:#fff5f5}
+.row.soon .rt{color:#e03131}
+.note{margin-top:14px;color:var(--muted);font-size:12px;line-height:1.85;text-align:center}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div>
-      <h1>今天去哪儿吃</h1>
+      <h1>是啊，吃什么</h1>
       <div class="sub">跟着食堂时间表走，到点就知道去哪</div>
     </div>
     <div class="clock">
@@ -81,27 +92,45 @@ h2{font-size:15px;font-weight:700;margin:0 0 4px}
     </div>
     <div id="openList"></div>
     <div class="next" id="nextBox"></div>
+    <div class="rand">
+      <button class="btn" id="randBtn">随机帮我选一个</button>
+      <button class="btn" id="copyBtn">复制营业清单</button>
+      <span class="rand-result" id="randResult"></span>
+    </div>
   </div>
 
   <div class="card controls">
-    <input type="range" id="slider" min="0" max="1435" step="5" value="0">
-    <div class="time-label" id="pickLabel">现在</div>
-    <button class="btn" id="nowBtn">回到现在</button>
-    <div class="seg" id="daySeg">
-      <button data-dt="weekday">工作日</button>
-      <button data-dt="weekend">周末</button>
+    <div class="controls-row">
+      <input type="range" id="slider" min="0" max="1435" step="5" value="0">
+      <div class="time-label" id="pickLabel">现在</div>
+      <button class="btn" id="nowBtn">回到现在</button>
+      <div class="seg" id="daySeg">
+        <button data-dt="weekday">工作日</button>
+        <button data-dt="weekend">周末</button>
+      </div>
+    </div>
+    <div class="controls-row">
+      <span class="flabel">按楼</span>
+      <div class="seg" id="buildSeg">
+        <button data-b="全部" class="on">全部</button>
+        <button data-b="学一">学一</button>
+        <button data-b="学二">学二</button>
+        <button data-b="学三">学三</button>
+        <button data-b="同翔园">同翔园</button>
+        <button data-b="其他">其他</button>
+      </div>
     </div>
   </div>
 
   <div class="card">
     <h2>完整时间表</h2>
     <div id="schedule"></div>
+    <div class="note">
+      咖啡厅：午餐 11:00–13:30、晚餐 17:00–21:00（单独计时，不计入上方时间表）<br>
+      以2026年第二学期平时开餐时间为参考
+    </div>
   </div>
 
-  <div class="footer">
-    数据来自桌面文档《食堂.docx》 · 同翔园早餐仅周一至周五供应<br>
-    拖动上方滑块可查看任意时间的供餐情况
-  </div>
 </div>
 
 <script>
@@ -109,20 +138,28 @@ const MEALS=[
  {meal:"早餐",start:"06:30",end:"08:40",days:"all",places:["学一A一楼","学二一楼","学三一楼"]},
  {meal:"早餐",start:"06:30",end:"09:00",days:"all",places:["学一B一楼"]},
  {meal:"早餐",start:"07:00",end:"08:10",days:"weekday",places:["同翔园"]},
- {meal:"课间餐",start:"09:00",end:"10:30",days:"all",places:["咖啡厅"]},
  {meal:"午餐",start:"10:30",end:"13:00",days:"all",places:["学一B一楼"]},
  {meal:"午餐",start:"11:00",end:"12:40",days:"all",places:["学一A一楼","学一A三楼","学二一楼","学二二楼","民族餐厅（学二三楼）","学三一楼","学三二楼","同翔园"]},
- {meal:"午餐",start:"11:00",end:"13:30",days:"all",places:["咖啡厅"]},
  {meal:"晚餐",start:"17:00",end:"18:30",days:"all",places:["学一A三楼","民族餐厅（学二三楼）","学三一楼","同翔园"]},
  {meal:"晚餐",start:"17:00",end:"19:30",days:"all",places:["学一B一楼","学二一楼","学二二楼","学三二楼"]},
- {meal:"晚餐",start:"17:00",end:"21:00",days:"all",places:["学一A一楼","咖啡厅"]}
+ {meal:"晚餐",start:"17:00",end:"21:00",days:"all",places:["学一A一楼"]}
 ];
 const ALLDAY=[
  {name:"学一B一楼东侧",start:"07:00",end:"21:30"},
  {name:"休闲主题餐厅（学二三楼）",start:"09:00",end:"20:00"},
  {name:"学三一楼北侧沁香园",start:"09:30",end:"21:30"}
 ];
-const ORDER=["早餐","课间餐","午餐","晚餐"];
+const ORDER=["早餐","午餐","晚餐"];
+
+let buildFilter="全部";
+function buildingOf(name){
+  if(name.indexOf("学一")===0)return "学一";
+  if(name.indexOf("学二")===0)return "学二";
+  if(name.indexOf("学三")===0)return "学三";
+  if(name.indexOf("同翔园")===0)return "同翔园";
+  return "其他";
+}
+function matchesBuild(name){return buildFilter==="全部"||buildingOf(name)===buildFilter;}
 
 function t2m(s){const a=s.split(":");return parseInt(a[0],10)*60+parseInt(a[1],10)}
 function m2t(m){return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")}
@@ -142,10 +179,10 @@ function openAllDay(min){
   return ALLDAY.filter(function(e){return min>=t2m(e.start)&&min<t2m(e.end)});
 }
 
-function groupEl(badge,cls,timeStr,places,note){
+function groupEl(badge,cls,timeStr,places,note,soon){
   const div=document.createElement("div");
-  div.className="group active";
-  let html='<div class="g-top"><span class="badge '+cls+'">'+badge+'</span><span class="g-time">'+timeStr+'</span>'+(note?'<span class="tag">'+note+'</span>':'')+'</div>';
+  div.className="group active"+(soon?" soon":"");
+  let html='<div class="g-top"><span class="badge '+cls+'">'+badge+'</span><span class="g-time">'+timeStr+'</span>'+((note||soon)?'<span class="tag'+(soon?" tag-soon":"")+'">'+(soon?"快关门":note)+'</span>':'')+'</div>';
   if(places)html+='<div class="places">'+places.map(function(p){return '<span class="chip">'+p+'</span>'}).join("")+'</div>';
   div.innerHTML=html;
   return div;
@@ -162,21 +199,33 @@ function render(){
 
   when.textContent=(mode==="manual"?m2t(min)+" · ":"")+(dt==="weekday"?"工作日":"周末");
 
+  const openF=open.filter(function(e){return e.places.some(matchesBuild)})
+                 .map(function(e){return {e:e,ps:e.places.filter(matchesBuild)}});
+  const allDF=allD.filter(function(e){return matchesBuild(e.name)});
+
   if(open.length===0&&allD.length===0){
     headline.textContent="现在没有饭点";
     const empty=document.createElement("div");
     empty.className="empty";
     empty.textContent="这个点食堂基本都关着，先歇会儿";
     list.appendChild(empty);
+  }else if(openF.length===0&&allDF.length===0){
+    headline.textContent="这栋楼现在没开";
+    const empty=document.createElement("div");
+    empty.className="empty";
+    empty.textContent="按当前楼栋筛选下没有营业的档口，换个楼看看";
+    list.appendChild(empty);
   }else{
     const names=[];
-    open.forEach(function(e){if(names.indexOf(e.meal)<0)names.push(e.meal)});
+    openF.forEach(function(o){if(names.indexOf(o.e.meal)<0)names.push(o.e.meal)});
     headline.textContent=names.length?"现在是"+names.join("、")+"时间":"正餐时间已过，但这些还开着";
-    open.forEach(function(e){
-      list.appendChild(groupEl(e.meal,"b-"+e.meal,e.start+"—"+e.end+(e.days==="weekday"?" · 周一至周五":""),e.places,null));
+    openF.forEach(function(o){
+      const e=o.e, soon=(t2m(e.end)-min)<15;
+      list.appendChild(groupEl(e.meal,"b-"+e.meal,e.start+"—"+e.end+(e.days==="weekday"?" · 周一至周五":""),o.ps,soon?"快关门":null,soon));
     });
-    allD.forEach(function(e){
-      list.appendChild(groupEl("全天营业","b-全天",e.start+"—"+e.end,null,e.name));
+    allDF.forEach(function(e){
+      const soon=(t2m(e.end)-min)<15;
+      list.appendChild(groupEl("全天营业","b-全天",e.start+"—"+e.end,null,soon?"快关门":e.name,soon));
     });
   }
 
@@ -200,25 +249,29 @@ function render(){
   ORDER.forEach(function(meal){
     const items=MEALS.filter(function(e){return e.meal===meal});
     if(!items.length)return;
+    const showItems=items.filter(function(e){return e.places.some(matchesBuild)});
+    if(!showItems.length)return;
     const h=document.createElement("div");
     h.className="sec-meal"; h.textContent=meal;
     sch.appendChild(h);
-    items.forEach(function(e){
+    showItems.forEach(function(e){
       const row=document.createElement("div");
       const on=(e.days!=="weekday"||dt==="weekday")&&min>=t2m(e.start)&&min<t2m(e.end);
-      row.className="row"+(on?" active":"")+(e.days==="weekday"&&dt!=="weekday"?" dim":"");
-      row.innerHTML='<span class="rt">'+e.start+"—"+e.end+'</span><span class="rp">'+e.places.join("、")+(e.days==="weekday"?' <span class="tag">周一至周五</span>':"")+'</span>';
+      const soon=on&&(t2m(e.end)-min)<15;
+      row.className="row"+(on?" active":"")+(soon?" soon":"")+(e.days==="weekday"&&dt!=="weekday"?" dim":"");
+      row.innerHTML='<span class="rt">'+e.start+"—"+e.end+(soon?' <span class="tag-soon">快关门</span>':'')+'</span><span class="rp">'+e.places.join("、")+(e.days==="weekday"?' <span class="tag">周一至周五</span>':"")+'</span>';
       sch.appendChild(row);
     });
   });
   const h2=document.createElement("div");
   h2.className="sec-meal"; h2.textContent="全天营业";
   sch.appendChild(h2);
-  ALLDAY.forEach(function(e){
+  ALLDAY.filter(function(e){return matchesBuild(e.name)}).forEach(function(e){
     const row=document.createElement("div");
     const on=min>=t2m(e.start)&&min<t2m(e.end);
-    row.className="row"+(on?" active":"");
-    row.innerHTML='<span class="rt">'+e.start+"—"+e.end+'</span><span class="rp">'+e.name+'</span>';
+    const soon=on&&(t2m(e.end)-min)<15;
+    row.className="row"+(on?" active":"")+(soon?" soon":"");
+    row.innerHTML='<span class="rt">'+e.start+"—"+e.end+(soon?' <span class="tag-soon">快关门</span>':'')+'</span><span class="rp">'+e.name+'</span>';
     sch.appendChild(row);
   });
 
@@ -250,7 +303,63 @@ for(let i=0;i<segs.length;i++){
     dayType=this.getAttribute("data-dt"); render();
   });
 }
+const bsegs=document.querySelectorAll("#buildSeg button");
+for(let i=0;i<bsegs.length;i++){
+  bsegs[i].addEventListener("click",function(){
+    buildFilter=this.getAttribute("data-b");
+    for(let j=0;j<bsegs.length;j++)bsegs[j].classList.toggle("on",bsegs[j]===this);
+    render();
+  });
+}
+function pickRandom(){
+  const min=selMin(), dt=effDayType();
+  const pool=[];
+  openMeals(min,dt).forEach(function(e){e.places.forEach(function(p){pool.push(p)})});
+  openAllDay(min).forEach(function(e){pool.push(e.name)});
+  const res=document.getElementById("randResult");
+  if(pool.length===0){res.textContent="现在都没开门，先等等吧";return;}
+  const chosen=pool[Math.floor(Math.random()*pool.length)];
+  res.textContent="现在去 "+chosen+" 吧";
+}
+document.getElementById("randBtn").addEventListener("click",pickRandom);
+document.getElementById("copyBtn").addEventListener("click",copyOpen);
 render();
+
+function copyOpen(){
+  const min=selMin(),dt=effDayType();
+  const open=openMeals(min,dt),allD=openAllDay(min);
+  const lines=[];
+  open.forEach(function(e){
+    e.places.filter(matchesBuild).forEach(function(p){
+      lines.push(p+"（"+e.meal+" "+e.start+"—"+e.end+"）");
+    });
+  });
+  allD.filter(function(e){return matchesBuild(e.name)}).forEach(function(e){
+    lines.push(e.name+"（全天营业 "+e.start+"—"+e.end+"）");
+  });
+  let text;
+  if(!lines.length){
+    text="现在食堂都关着呢～";
+  }else{
+    const head="【是啊，吃什么】"+(mode==="manual"?m2t(min):"现在")+" · "+(dt==="weekday"?"工作日":"周末")+(buildFilter!=="全部"?" · "+buildFilter:"")+" 开着：";
+    text=head+"\n"+lines.map(function(l){return "· "+l}).join("\n");
+  }
+  copyText(text);
+}
+function copyText(text){
+  const btn=document.getElementById("copyBtn");
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){flashCopy(btn)}).catch(function(){fallbackCopy(text,btn)});
+  }else{fallbackCopy(text,btn);}
+}
+function fallbackCopy(text,btn){
+  const ta=document.createElement("textarea");ta.value=text;
+  ta.style.position="fixed";ta.style.opacity="0";ta.style.top="-1000px";document.body.appendChild(ta);
+  ta.select();
+  try{document.execCommand("copy");flashCopy(btn);}catch(e){alert(text);}
+  document.body.removeChild(ta);
+}
+function flashCopy(btn){btn.textContent="已复制 ✓";setTimeout(function(){btn.textContent="复制营业清单"},1500);}
 </script>
 </body>
 </html>
