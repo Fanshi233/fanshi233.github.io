@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今天去哪儿吃 · 食堂时间表</title>
+<style>
+:root{
+  --bg:#f5f6f8; --card:#ffffff; --text:#1f2329; --muted:#8a9099;
+  --accent:#e8590c; --accent-soft:#fff2e8; --line:#e9ebef;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--bg);color:var(--text);min-height:100vh;padding:36px 18px 64px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+h1{font-size:24px;font-weight:700;letter-spacing:.5px}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+.clock{text-align:right}
+.clock .t{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.clock .d{color:var(--muted);font-size:12px;margin-top:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.status-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.status-head .big{font-size:20px;font-weight:700}
+.status-head .when{color:var(--muted);font-size:13px}
+.group{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;background:#fbfbfc}
+.group.active{border-color:#ffc9a3;background:var(--accent-soft)}
+.g-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px}
+.b-早餐{background:#fff9db;color:#e67700}
+.b-课间餐{background:#e7f5ff;color:#1971c2}
+.b-午餐{background:#ffe8d9;color:#d9480f}
+.b-晚餐{background:#f3f0ff;color:#6741d9}
+.b-全天{background:#ebfbee;color:#2b8a3e}
+.g-time{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.tag{font-size:11px;color:#e67700;background:#fff9db;border-radius:4px;padding:1px 5px}
+.places{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:13px}
+.empty{padding:18px 6px 6px;color:var(--muted);font-size:14px;text-align:center}
+.next{margin-top:12px;font-size:13px;color:var(--muted);text-align:center}
+.next b{color:var(--accent);font-weight:600}
+.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.controls input[type=range]{flex:1;min-width:180px;accent-color:var(--accent)}
+.time-label{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;min-width:52px;text-align:center}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer;color:var(--text)}
+.btn:hover{border-color:#ffc9a3;color:var(--accent)}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:#fff;padding:5px 12px;font-size:13px;cursor:pointer;color:var(--muted)}
+.seg button.on{background:var(--accent);color:#fff}
+h2{font-size:15px;font-weight:700;margin:0 0 4px}
+.sec-meal{font-size:13px;font-weight:700;color:var(--muted);margin:14px 0 6px;letter-spacing:1px}
+.row{display:flex;gap:10px;padding:8px 10px;border-radius:8px;font-size:13.5px;align-items:baseline}
+.row .rt{font-variant-numeric:tabular-nums;color:var(--text);white-space:nowrap;min-width:104px;font-weight:600}
+.row .rp{color:#495057;line-height:1.6}
+.row.active{background:var(--accent-soft)}
+.row.active .rt{color:var(--accent)}
+.row.dim{opacity:.45}
+.footer{margin-top:18px;color:var(--muted);font-size:12px;text-align:center;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>今天去哪儿吃</h1>
+      <div class="sub">跟着食堂时间表走，到点就知道去哪</div>
+    </div>
+    <div class="clock">
+      <div class="t" id="clock">--:--:--</div>
+      <div class="d" id="today"></div>
+    </div>
+  </header>
+
+  <div class="card">
+    <div class="status-head">
+      <span class="big" id="headline">…</span>
+      <span class="when" id="when"></span>
+    </div>
+    <div id="openList"></div>
+    <div class="next" id="nextBox"></div>
+  </div>
+
+  <div class="card controls">
+    <input type="range" id="slider" min="0" max="1435" step="5" value="0">
+    <div class="time-label" id="pickLabel">现在</div>
+    <button class="btn" id="nowBtn">回到现在</button>
+    <div class="seg" id="daySeg">
+      <button data-dt="weekday">工作日</button>
+      <button data-dt="weekend">周末</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>完整时间表</h2>
+    <div id="schedule"></div>
+  </div>
+
+  <div class="footer">
+    数据来自桌面文档《食堂.docx》 · 同翔园早餐仅周一至周五供应<br>
+    拖动上方滑块可查看任意时间的供餐情况
+  </div>
+</div>
+
+<script>
+const MEALS=[
+ {meal:"早餐",start:"06:30",end:"08:40",days:"all",places:["学一A一楼","学二一楼","学三一楼"]},
+ {meal:"早餐",start:"06:30",end:"09:00",days:"all",places:["学一B一楼"]},
+ {meal:"早餐",start:"07:00",end:"08:10",days:"weekday",places:["同翔园"]},
+ {meal:"课间餐",start:"09:00",end:"10:30",days:"all",places:["咖啡厅"]},
+ {meal:"午餐",start:"10:30",end:"13:00",days:"all",places:["学一B一楼"]},
+ {meal:"午餐",start:"11:00",end:"12:40",days:"all",places:["学一A一楼","学一A三楼","学二一楼","学二二楼","民族餐厅（学二三楼）","学三一楼","学三二楼","同翔园"]},
+ {meal:"午餐",start:"11:00",end:"13:30",days:"all",places:["咖啡厅"]},
+ {meal:"晚餐",start:"17:00",end:"18:30",days:"all",places:["学一A三楼","民族餐厅（学二三楼）","学三一楼","同翔园"]},
+ {meal:"晚餐",start:"17:00",end:"19:30",days:"all",places:["学一B一楼","学二一楼","学二二楼","学三二楼"]},
+ {meal:"晚餐",start:"17:00",end:"21:00",days:"all",places:["学一A一楼","咖啡厅"]}
+];
+const ALLDAY=[
+ {name:"学一B一楼东侧",start:"07:00",end:"21:30"},
+ {name:"休闲主题餐厅（学二三楼）",start:"09:00",end:"20:00"},
+ {name:"学三一楼北侧沁香园",start:"09:30",end:"21:30"}
+];
+const ORDER=["早餐","课间餐","午餐","晚餐"];
+
+function t2m(s){const a=s.split(":");return parseInt(a[0],10)*60+parseInt(a[1],10)}
+function m2t(m){return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")}
+const WEEK=["日","一","二","三","四","五","六"];
+
+let mode="now", manualMin=0, dayType="auto";
+function curDayType(){const w=new Date().getDay();return (w>=1&&w<=5)?"weekday":"weekend"}
+function effDayType(){return dayType==="auto"?curDayType():dayType}
+function selMin(){const d=new Date();return mode==="now"?d.getHours()*60+d.getMinutes():manualMin}
+
+function openMeals(min,dt){
+  return MEALS.filter(function(e){
+    return (e.days!=="weekday"||dt==="weekday")&&min>=t2m(e.start)&&min<t2m(e.end);
+  }).sort(function(a,b){return t2m(a.start)-t2m(b.start)});
+}
+function openAllDay(min){
+  return ALLDAY.filter(function(e){return min>=t2m(e.start)&&min<t2m(e.end)});
+}
+
+function groupEl(badge,cls,timeStr,places,note){
+  const div=document.createElement("div");
+  div.className="group active";
+  let html='<div class="g-top"><span class="badge '+cls+'">'+badge+'</span><span class="g-time">'+timeStr+'</span>'+(note?'<span class="tag">'+note+'</span>':'')+'</div>';
+  if(places)html+='<div class="places">'+places.map(function(p){return '<span class="chip">'+p+'</span>'}).join("")+'</div>';
+  div.innerHTML=html;
+  return div;
+}
+
+function render(){
+  const min=selMin(), dt=effDayType();
+  const open=openMeals(min,dt), allD=openAllDay(min);
+  const headline=document.getElementById("headline");
+  const when=document.getElementById("when");
+  const list=document.getElementById("openList");
+  const nextBox=document.getElementById("nextBox");
+  list.innerHTML="";
+
+  when.textContent=(mode==="manual"?m2t(min)+" · ":"")+(dt==="weekday"?"工作日":"周末");
+
+  if(open.length===0&&allD.length===0){
+    headline.textContent="现在没有饭点";
+    const empty=document.createElement("div");
+    empty.className="empty";
+    empty.textContent="这个点食堂基本都关着，先歇会儿";
+    list.appendChild(empty);
+  }else{
+    const names=[];
+    open.forEach(function(e){if(names.indexOf(e.meal)<0)names.push(e.meal)});
+    headline.textContent=names.length?"现在是"+names.join("、")+"时间":"正餐时间已过，但这些还开着";
+    open.forEach(function(e){
+      list.appendChild(groupEl(e.meal,"b-"+e.meal,e.start+"—"+e.end+(e.days==="weekday"?" · 周一至周五":""),e.places,null));
+    });
+    allD.forEach(function(e){
+      list.appendChild(groupEl("全天营业","b-全天",e.start+"—"+e.end,null,e.name));
+    });
+  }
+
+  let best=null;
+  MEALS.forEach(function(e){
+    if(e.days==="weekday"&&dt!=="weekday")return;
+    let d=t2m(e.start)-min; if(d<=0)d+=1440;
+    if(!best||d<best.d)best={d:d,label:e.meal+" "+e.start};
+  });
+  ALLDAY.forEach(function(e){
+    let d=t2m(e.start)-min; if(d<=0)d+=1440;
+    if(!best||d<best.d)best={d:d,label:e.name+" "+e.start};
+  });
+  if(best){
+    const h=Math.floor(best.d/60),mm=best.d%60;
+    nextBox.innerHTML="下一场：<b>"+best.label+"</b> 开始 · 还有 "+(h?h+" 小时 ":"")+mm+" 分钟";
+  }
+
+  const sch=document.getElementById("schedule");
+  sch.innerHTML="";
+  ORDER.forEach(function(meal){
+    const items=MEALS.filter(function(e){return e.meal===meal});
+    if(!items.length)return;
+    const h=document.createElement("div");
+    h.className="sec-meal"; h.textContent=meal;
+    sch.appendChild(h);
+    items.forEach(function(e){
+      const row=document.createElement("div");
+      const on=(e.days!=="weekday"||dt==="weekday")&&min>=t2m(e.start)&&min<t2m(e.end);
+      row.className="row"+(on?" active":"")+(e.days==="weekday"&&dt!=="weekday"?" dim":"");
+      row.innerHTML='<span class="rt">'+e.start+"—"+e.end+'</span><span class="rp">'+e.places.join("、")+(e.days==="weekday"?' <span class="tag">周一至周五</span>':"")+'</span>';
+      sch.appendChild(row);
+    });
+  });
+  const h2=document.createElement("div");
+  h2.className="sec-meal"; h2.textContent="全天营业";
+  sch.appendChild(h2);
+  ALLDAY.forEach(function(e){
+    const row=document.createElement("div");
+    const on=min>=t2m(e.start)&&min<t2m(e.end);
+    row.className="row"+(on?" active":"");
+    row.innerHTML='<span class="rt">'+e.start+"—"+e.end+'</span><span class="rp">'+e.name+'</span>';
+    sch.appendChild(row);
+  });
+
+  document.getElementById("pickLabel").textContent=mode==="manual"?m2t(manualMin):"现在";
+  document.getElementById("slider").value=mode==="manual"?manualMin:selMin();
+  const segs=document.querySelectorAll("#daySeg button");
+  for(let i=0;i<segs.length;i++)segs[i].classList.toggle("on",effDayType()===segs[i].getAttribute("data-dt"));
+}
+
+function tick(){
+  const d=new Date();
+  document.getElementById("clock").textContent=
+    String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")+":"+String(d.getSeconds()).padStart(2,"0");
+  document.getElementById("today").textContent=(d.getMonth()+1)+"月"+d.getDate()+"日 · 周"+WEEK[d.getDay()];
+  if(mode==="now")render();
+}
+tick();
+setInterval(tick,1000);
+
+document.getElementById("slider").addEventListener("input",function(e){
+  mode="manual"; manualMin=parseInt(e.target.value,10); render();
+});
+document.getElementById("nowBtn").addEventListener("click",function(){
+  mode="now"; render();
+});
+const segs=document.querySelectorAll("#daySeg button");
+for(let i=0;i<segs.length;i++){
+  segs[i].addEventListener("click",function(){
+    dayType=this.getAttribute("data-dt"); render();
+  });
+}
+render();
+</script>
+</body>
+</html>
